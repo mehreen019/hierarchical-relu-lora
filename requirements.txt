@@ -1,0 +1,24 @@
+# Core dependencies for Hierarchical ReLU-LoRA experiments
+torch>=2.2.0
+transformers>=4.41.0
+accelerate>=0.27.0
+datasets>=2.14.0
+peft>=0.10.0
+
+# Evaluation
+lm-eval>=0.4.2
+
+# Efficient training
+flash-attn>=2.5.0
+deepspeed>=0.14.0
+
+# Utilities
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tqdm>=4.65.0
+
+# Jupyter (optional, for notebook experiments)
+jupyter>=1.0.0
+ipywidgets>=8.0.0
