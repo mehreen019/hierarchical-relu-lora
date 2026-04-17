@@ -1,0 +1,25 @@
+{
+  "model_name": "allenai/OLMoE-1B-7B-0125",
+  "model_dim": 2048,
+  "ffn_dim": 1024,
+  "num_layers": 16,
+  "num_experts": 64,
+  "top_k": 8,
+  "jaccard_python_medical": 0.1029,
+  "jaccard_math_creative": 0.0528,
+  "jaccard_null_baseline": 0.8403,
+  "top_n_jaccard": 16,
+  "chosen_option": "B",
+  "chosen_pair": "Math vs Creative",
+  "target_layer": 6,
+  "target_expert": 18,
+  "primary_dataset": "DigitalLearningGmbH/MATH-lighteval",
+  "primary_col": "problem",
+  "conflict_dataset": "roneneldan/TinyStories",
+  "conflict_col": "text",
+  "conflict_config": null,
+  "domain_names": [
+    "math",
+    "creative"
+  ]
+}

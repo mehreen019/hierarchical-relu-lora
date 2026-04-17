@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import pdfplumber; pdf = pdfplumber.open\\('Hierarchical_ReLU_LoRA_Spawning_Proposal.pdf'\\); [print\\(f'=== PAGE {i+1} ===\\\\n{p.extract_text\\(\\)}'\\) for i,p in enumerate\\(pdf.pages\\)]\")",
+      "Bash(python -c \"import PyPDF2; r=PyPDF2.PdfReader\\('Hierarchical_ReLU_LoRA_Spawning_Proposal.pdf'\\); [print\\(f'=== PAGE {i+1} ===\\\\n{r.pages[i].extract_text\\(\\)}'\\) for i in range\\(len\\(r.pages\\)\\)]\")",
+      "Bash(pip install *)",
+      "Bash(python -c ' *)",
+      "Bash(python fix_notebook.py)",
+      "Bash(cat olmoe_experiment_config.json)"
+    ]
+  }
+}
