@@ -6,7 +6,9 @@
       "Bash(pip install *)",
       "Bash(python -c ' *)",
       "Bash(python fix_notebook.py)",
-      "Bash(cat olmoe_experiment_config.json)"
+      "Bash(cat olmoe_experiment_config.json)",
+      "Bash(python -c:*)",
+      "Bash(python3:*)"
     ]
   }
 }
