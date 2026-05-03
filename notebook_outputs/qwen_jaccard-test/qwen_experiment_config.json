@@ -1,0 +1,30 @@
+{
+  "model_name": "Qwen/Qwen1.5-MoE-A2.7B",
+  "model_dim": 2048,
+  "ffn_dim": 1408,
+  "shared_expert_ffn_dim": 5632,
+  "num_layers": 24,
+  "num_routing_experts": 60,
+  "num_shared_experts": 1,
+  "top_k": 4,
+  "top_n_jaccard": 15,
+  "jaccard_python_medical": 0.0714,
+  "jaccard_math_creative": 0.1315,
+  "jaccard_null_baseline": 0.5101,
+  "chosen_option": "A",
+  "chosen_pair": "Python vs Medical",
+  "target_layer": 0,
+  "target_expert": 5,
+  "primary_dataset": "openai/openai_humaneval",
+  "primary_col": "prompt",
+  "primary_config": null,
+  "conflict_dataset": "qiaojin/PubMedQA",
+  "conflict_col": "question",
+  "conflict_config": "pqa_labeled",
+  "domain_names": [
+    "code",
+    "medical"
+  ],
+  "olmoe_jaccard_math_creative": 0.0528,
+  "olmoe_null_baseline": 0.8403
+}
