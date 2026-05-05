@@ -1,0 +1,45 @@
+Cell  0: # Hierarchical ReLU-LoRA Spawning — Final Notebook
+Cell  1: ## Section 1 — Install & Model Load
+Cell  2: # Install (run once per session)
+Cell  3: !pip install transformers>=4.41.0 accelerate datasets peft torch>=2.2.0 tabulate
+Cell  4: # Cell 9: Load Phi-3.5-mini in bf16 with maximum memory efficiency
+Cell  5: ## Section 2 — Class Definitions
+Cell  6: import torch
+Cell  7: import torch
+Cell  8: # Replace SaturationMonitor entirely for calibration.
+Cell  9: import torch
+Cell 10: # ── DR-LoRA Layer and Linear wrapper (teammate's implementation) ─────────────
+Cell 11: # ── DR-LoRA application helpers ──────────────────────────────────────────────
+Cell 12: # ── DRLoRAGrowthSchedule ─────────────────────────────────────────────────────
+Cell 13: # ── DRLoRATracker + unfreeze_routers ─────────────────────────────────────────
+Cell 14: # ── perform_rank_growth + get_rank_distribution ──────────────────────────────
+Cell 15: # ── Data preparation and DR-LoRA evaluation helpers ─────────────────────────
+Cell 16: ## Section 3 — Architecture Inspection (optional)
+Cell 17: # Cell 10: Inspect Phi-3.5-MoE architecture to find the right module path
+Cell 18: ## Section 4 — Jaccard Routing Diagnostic
+Cell 19: # ── Diagnostics Cell: Jaccard Routing Overlap ────────────────────────────────
+Cell 20: ## Section 5 — Shared Constants & Data Loader
+Cell 21: # ── Shared calibration constants (run this before any calibration cell) ───────
+Cell 22: # ── Real Data Loader (adapted from dataset_builder.py, notebook-safe) ────────
+Cell 23: ## Section 6 — Change 1: Gradient Cosine Similarity Diagnostic
+Cell 24: # ── Inline probe texts (defined here so this cell runs before Phase 3) ────────
+Cell 25: # ═══════════════════════════════════════════════════════════════════════════
+Cell 26: ## Section 7 — Phase 2: Hyperparameter Calibration Grid
+Cell 27: # ── Trigger Diagnostic: why is nothing firing? ────────────────────────────────
+Cell 28: # ── Phase 2: Hyperparameter Calibration Grid ─────────────────────────────────
+Cell 29: ## Section 8 — JSD Sub-Router Specialisation Probe
+Cell 30: # ── Phase 1 / Phase 4: JSD Sub-Router Specialisation Probe ───────────────────
+Cell 31: ## Section 9 — Phase 3: Conflict-Scaling Grid
+Cell 32: # ── Phase 3 Config ────────────────────────────────────────────────────────────
+Cell 33: # ── PackedDRLoRAExperts ───────────────────────────────────────────────────────
+Cell 34: # ── Method Factory ────────────────────────────────────────────────────────────
+Cell 35: # ── Evaluation Helper ─────────────────────────────────────────────────────────
+Cell 36: # ── Phase 3 Grid Runner ───────────────────────────────────────────────────────
+Cell 37: ## Section 10 — Eager Spawn Ablation
+Cell 38: # ── Eager Spawn Ablation: Hierarchical Run C with lower delta_threshold ────
+Cell 39: ## Section 11 — Change 2: Multi-Layer Hierarchical Spawning
+Cell 40: # ═══════════════════════════════════════════════════════════════════════════
+Cell 41: ## Section 12 — DR-LoRA Standalone Full Run (MetaMathQA)
+Cell 42: from datasets import load_dataset
+Cell 43: import math
+Cell 44: import re
